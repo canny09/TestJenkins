@@ -9,7 +9,7 @@ SECONDS=0
 #脚本在项目文件的路径下
 project_path="$(dirname "$(pwd)")"
 #取当前时间字符串添加到文件结尾
-now=$(date +"%Y_%m_%d_%H_%M_%S")
+now=$(date +"%Y-%m-%d-%H-%M-%S")
 
 #指定项目scheme名称
 scheme="AttribuedString"
@@ -23,11 +23,11 @@ export_method="app-store"
 #指定项目地址
 workspace_path="$project_path/AttributedString.xcodeproj"
 #指定输出路径
-output_path="/Users/kiben/Desktop"
+output_path="/Users/kiben/Desktop/JenkinsArchive"
 #指定输出归档文件地址
 archive_path="$output_path/AttributedString_${now}.xcarchive"
 #指定输出ipa名称
-ipa_name="BlockyMods_${now}.ipa"
+ipa_name="AttributedString_${now}.ipa"
 #指定输出ipa地址
 ipa_path="$output_path/${ipa_name}"
 #获取执行命令时的commit message
@@ -41,7 +41,7 @@ echo "---export method: ${export_method}---"
 echo "---commit message: $1---"
 
 #build之前先clean
-fastlane gym --target ${workspace_path} --scheme ${scheme} --clean --configuration ${configuration} --archive_path ${archive_path} --export_method ${export_method} --output_directory ${output_path} --output_name ${ipa_name}
+fastlane gym --project ${workspace_path} --scheme ${scheme} --clean --configuration ${configuration} --archive_path ${archive_path} --export_method ${export_method} --output_directory ${output_path} --output_name ${ipa_name}
 
 #输出总用时
 echo "-----Finished. Total time: ${SECONDS}s ----- "
