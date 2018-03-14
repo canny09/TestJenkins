@@ -31,7 +31,7 @@ ipa_name="BlockyMods_${now}.ipa"
 #指定输出ipa地址
 ipa_path="$output_path/${ipa_name}"
 #获取执行命令时的commit message
-commit_msg="$1
+commit_msg="$1"
 
 #输出设定的变量值
 echo "---workspace path: ${workspace_path}---"
@@ -44,6 +44,4 @@ echo "---commit message: $1---"
 fastlane gym --target ${workspace_path} --scheme ${scheme} --clean --configuration ${configuration} --archive_path ${archive_path} --export_method ${export_method} --output_directory ${output_path} --output_name ${ipa_name}
 
 #输出总用时
-echo "-----Finished. Total time: ${SECONDS}s -----"
-
-
+echo "-----Finished. Total time: ${SECONDS}s ----- "
