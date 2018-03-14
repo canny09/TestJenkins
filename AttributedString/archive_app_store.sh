@@ -21,7 +21,7 @@ export_method="app-store"
 #上述scheme/target/configuration若不清楚值可以用`xcodebuild -list`查看
 
 #指定项目地址
-workspace_path="$project_path/AttributedString.xcodeproj"
+workspace_path="$project_path/AttributedString/AttributedString.xcodeproj"
 #指定输出路径
 output_path="/Users/kiben/Desktop/JenkinsArchive"
 #指定输出归档文件地址
