@@ -41,7 +41,7 @@ echo "---export method: ${export_method}---"
 echo "---commit message: $1---"
 
 #build之前先clean
-fastlane gym --project ${workspace_path} --scheme ${scheme} --clean --configuration ${configuration} --archive_path ${archive_path} --export_method ${export_method} --include_symbols false --output_directory ${output_path} --output_name ${ipa_name}
+fastlane gym --project ${workspace_path} --scheme ${scheme} --clean --configuration ${configuration} --archive_path ${archive_path} --export_method ${export_method} --include_symbols false --include_bitcode false --output_directory ${output_path} --output_name ${ipa_name}
 
 #输出总用时
 echo "-----Finished. Total time: ${SECONDS}s ----- "
