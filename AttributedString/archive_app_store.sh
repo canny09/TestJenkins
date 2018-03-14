@@ -23,7 +23,7 @@ export_method="app-store"
 #指定项目地址
 workspace_path="$project_path/AttributedString/AttributedString.xcodeproj"
 #指定输出路径
-output_path="/Users/kiben/Desktop/JenkinsArchive"
+output_path="/Users/Shared/Jenkins/Home/workspace/TestJenkins/AttributedString/Archive"
 #指定输出归档文件地址
 archive_path="$output_path/AttributedString_${now}.xcarchive"
 #指定输出ipa名称
