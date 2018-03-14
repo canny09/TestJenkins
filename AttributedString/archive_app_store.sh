@@ -12,7 +12,7 @@ project_path="$(dirname "$(pwd)")"
 now=$(date +"%Y-%m-%d-%H-%M-%S")
 
 #指定项目scheme名称
-scheme="AttribuedString"
+scheme="AttributedString"
 #指定打包的配置名
 configuration="Release"
 #指定打包所使用的输出方式，目前支持app-store, package, ad-hoc, enterprise, development, 和developer-id，即xcodebuild的method参数
